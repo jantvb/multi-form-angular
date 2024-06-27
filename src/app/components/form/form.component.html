@@ -1,0 +1,8 @@
+<button *ngIf="label !== 'Name'" (click)="backLinkCliked()" class="back-button">< Back</button>
+<label>{{label}}</label>
+<input
+    [(ngModel)]="inputValue"
+    [type]="type"
+    required />
+
+<button (click)="sendData()" [disabled]="inputValue?.length === 0">{{btnTxt}}</button>
